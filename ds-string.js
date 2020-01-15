@@ -6,4 +6,6 @@ const reverse = a => {
     return b;
 }
 
-module.exports = { reverse };
+const isPalindrome = input => input === reverse(input);
+
+module.exports = { reverse ,isPalindrome};

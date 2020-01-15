@@ -7,3 +7,8 @@ test('String reverse odd number case', () => {
     expect(x.reverse("wasitaratisaw")).toBe("wasitaratisaw");
     expect(x.reverse("12345")).toBe("54321");
 });
+
+test('String reverse odd number case', () => {
+    expect(x.isPalindrome("wasitaratisaw")).toBe(true);
+ 
+});
