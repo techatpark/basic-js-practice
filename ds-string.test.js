@@ -15,4 +15,5 @@ test('String reverse odd number case', () => {
 
 test('CamelCase identifying ',() => {
     expect(x.camelCase("helloWorld")).toBe(2);
+    expect(x.camelCase("hello 24World")).toBe(2);
 });
