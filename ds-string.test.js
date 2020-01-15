@@ -12,3 +12,7 @@ test('String reverse odd number case', () => {
     expect(x.isPalindrome("wasitaratisaw")).toBe(true);
  
 });
+
+test('CamelCase identifying ',() => {
+    expect(x.camelCase("helloWorld")).toBe(2);
+});
