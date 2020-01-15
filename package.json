@@ -1,0 +1,25 @@
+{
+  "name": "basic-js-practice",
+  "version": "1.0.0",
+  "description": "Basic Project setup for Java Script Practice",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techatpark/basic-js-practice.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Sathish Kumar Thiyagarajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techatpark/basic-js-practice/issues"
+  },
+  "homepage": "https://github.com/techatpark/basic-js-practice#readme"
+}
