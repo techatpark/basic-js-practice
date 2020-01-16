@@ -17,3 +17,8 @@ test('CamelCase identifying ',() => {
     expect(x.camelCase("helloWorld")).toBe(2);
     expect(x.camelCase("hello 24World")).toBe(2);
 });
+
+test('strong  password inputing ',() => {
+    expect(x.strongpassword(11,"#HackerRank")).toBe(1);
+    expect(x.strongpassword(3,"ab1")).toBe(3);
+});
