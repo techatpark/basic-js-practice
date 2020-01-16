@@ -1,10 +1,7 @@
-import { fib }  from './ds-numbers';
+const x = require('./ds-numbers');
 
-test('Calculate fibannoci value', () => {
-    expect(fib(9)).toBe(34);
-    expect(fib(0)).toBe(0);
-  });
-
-  test('calculate fibanocci without memoization ',() => {
-  expect(fib(9)).toBe(34);
-  });
+test('calculate my grade ',() => {
+expect(x.getGrade(30)).toBe('A');
+expect(x.getGrade(0)).toBe('F');
+expect(x.getGrade(-10)).toBe(undefined);
+});
