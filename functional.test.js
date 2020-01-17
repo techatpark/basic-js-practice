@@ -5,3 +5,8 @@ expect(x.mapForEach(strArray, function(item) {
     return item.length;
   })).toStrictEqual([ 10, 6, 3, 4, 1 ]);
 });
+
+test('find the second largest', () => {
+expect(x.getSecondLargest([6,6,6,6,6])).toBe(6);
+expect(x.getSecondLargest([10,6,3,10,10])).toBe(6);
+});
