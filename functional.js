@@ -23,4 +23,9 @@ function getSecondLargest(nums) {
 }
 // function find if a given item is an array or not;
 const is_array = input => (toString.call(input) === "[object Array]") ? true : false;
-  module.exports = { mapForEach, getSecondLargest,is_array };
+// function to simply clone an array
+const array_Clone = x => x.slice(0);
+
+module.exports = {
+  mapForEach, getSecondLargest, is_array, array_Clone
+};

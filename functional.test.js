@@ -15,3 +15,9 @@ test('find if a given item is an array', () => {
 expect(x.is_array('w3resource')).toBe(false);
 expect(x.is_array([1, 2, 4, 0])).toBe(true);
 });
+
+test('cloning an array', () => {
+expect(x.array_Clone([1, 2, 4, 0])).toStrictEqual([1, 2, 4, 0]);
+expect(x.array_Clone([1, 2, [4, 0]])).toStrictEqual([1, 2, [4, 0]]);
+expect(x.array_Clone([0])).toStrictEqual([0]);
+});
