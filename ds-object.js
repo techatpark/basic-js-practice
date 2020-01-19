@@ -1,10 +1,8 @@
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
 
-function cars(x){
-var myCar = new Object();
-myCar.make = 'Ford';
-myCar.model = 'Mustang';
-myCar.year = 1969;
-
-return myCar[x];
+    return this;
 }
-module.exports = {cars };
+module.exports = { Car };
