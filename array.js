@@ -38,5 +38,19 @@ const sub_array = (arr,sum) => {
         tot = arr[i+1];
     }
 }
+//Maximum index
+const maximum_index = array => {
+    let max =-1;
+    for(let i=0; i<array.length; i++){
+        for(let j=i+1; j<array.length; j++){
+            if(array[i]<=array[j]){
+                if((j-1)>max){
+                    max = j-i;
+                }
+            }
+        }
+    }
+    return max;
+}
 
-module.exports = { greatest_sum, rotate, sub_array};
+module.exports = { greatest_sum, rotate, sub_array, maximum_index};
