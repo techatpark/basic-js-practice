@@ -53,4 +53,5 @@ const maximum_index = array => {
     return max;
 }
 
+
 module.exports = { greatest_sum, rotate, sub_array, maximum_index};
