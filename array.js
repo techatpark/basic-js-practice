@@ -24,5 +24,19 @@ const rotate = (arr, d) => {
     }
     return arr;
 }
+// finding subarray with given sum
 
-module.exports = { greatest_sum, rotate };
+const sub_array = (arr,sum) => {
+    let tot = arr[0];
+    for(let i=0;i<arr.length; i++){
+        for(let j=i+1; j<arr.length; j++){
+            tot = tot+arr[j];
+            if(tot === sum){
+                return [i+1, j+1];
+            }
+        }
+        tot = arr[i+1];
+    }
+}
+
+module.exports = { greatest_sum, rotate, sub_array};
