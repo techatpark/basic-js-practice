@@ -1,4 +1,4 @@
-const x = require('./ds-string');
+const x = require('../src/ds-string');
 
 test('String reverse odd number case', () => {
     expect(x.reverse("abc dba")).toBe("abd cba");

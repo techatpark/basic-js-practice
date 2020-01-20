@@ -1,4 +1,4 @@
-const x = require('./calculator');
+const x = require('../src/calculator');
 
 test('area 3 and 4.5 to equal 13.5', () => {
   expect(x.area(3, 4.5)).toBe(13.5);

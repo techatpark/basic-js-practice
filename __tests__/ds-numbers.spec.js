@@ -1,4 +1,4 @@
-const x = require('./ds-numbers');
+const x = require('../src/ds-numbers');
 
 test('calculate my grade ',() => {
 expect(x.getGrade(30)).toBe('A');

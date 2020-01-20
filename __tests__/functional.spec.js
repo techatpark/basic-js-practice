@@ -1,4 +1,4 @@
-const x = require('./functional');
+const x = require('../src/functional');
 const strArray = ['JavaScript', 'Python', 'PHP', 'Java', 'C'];
 test('Functional program', () => {
 expect(x.mapForEach(strArray, function(item) {
