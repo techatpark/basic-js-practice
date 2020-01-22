@@ -4,6 +4,7 @@
   "description": "Basic Project setup for Java Script Practice",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src",
     "test": "jest"
   },
   "jest": {
@@ -32,6 +33,7 @@
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.4",
+    "eslint": "^6.8.0",
     "prettier": "1.19.1"
   }
 }
