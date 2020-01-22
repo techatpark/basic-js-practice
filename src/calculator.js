@@ -1,4 +1,4 @@
-const area = (a, b) => a * b
+const area = (a, b) => a * b;
 
 const perimeter = (a, b) => 2 * (a + b)
 
@@ -23,4 +23,4 @@ const fib_ = n => {
         return fib_(n - 1) + fib_(n - 2)
     }
 }
-export default { area, perimeter, factorial, multiply, fib, fib_ }
+module.exports = { area, perimeter, factorial, multiply, fib, fib_ }
