@@ -1,4 +1,4 @@
-function scopes (input) {
+function scopes(input) {
     let x = input;
     var y = input;
     const z = input;
@@ -6,15 +6,13 @@ function scopes (input) {
     if (input === 10) {
         x = 20;
         y = 20;
-    }
-    else {
+    } else {
         //here let us see if constant can be reassigned
         try {
             z = 20;
         } catch (error) {
             return error.message;
         }
-
     }
     return [x, y, z];
 }
