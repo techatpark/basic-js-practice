@@ -4,8 +4,8 @@ function scopes(input) {
     const z = input;
     // here let us see the block scope
     if (input === 10) {
-        x = 20;
-        y = 20;
+        let x = 20;
+        var y = 20;
     } else {
         //here let us see if constant can be reassigned
         try {
