@@ -1,4 +1,4 @@
-import { votingRight, nameStudent, studentExist, underAge, totalStudents } from '../src/array';
+import { votingRight, nameStudent, studentExist, underAge, totalStudents, forEachMap } from '../src/array';
 const student = [
     {
         name: 'Rahul',
@@ -22,6 +22,8 @@ const student = [
     },
 ];
 
+const ageGroup = [1, 21, 33, 45, 56, 96];
+
 test('Students voting right', () => {
     expect(votingRight(student)).toStrictEqual(['Rahul', 'Suresh']);
 });
@@ -40,4 +42,8 @@ test('Are there any underage students', () => {
 
 test('total Students', () => {
     expect(totalStudents(student)).toBe(4);
+});
+
+test('do array.forEach.map', () => {
+    expect(forEachMap(ageGroup)).toBe();
 });

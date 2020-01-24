@@ -14,4 +14,13 @@ const totalStudents = input => {
     return total.length;
 };
 
-export default { votingRight, nameStudent, studentExist, underAge, totalStudents };
+const forEachMap = input => {
+    let arr1 = input
+        .forEach((value, index) => {
+            `The value at ${index + 1} is ${value} `;
+        })
+        .map(elements => elements + 1);
+    return arr1;
+};
+
+export default { votingRight, nameStudent, studentExist, underAge, totalStudents, forEachMap };
