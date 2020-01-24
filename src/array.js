@@ -15,12 +15,9 @@ const totalStudents = input => {
 };
 
 const forEachMap = input => {
-    let arr1 = input
-        .forEach((value, index) => {
-            `The value at ${index + 1} is ${value} `;
-        })
-        .map(elements => elements + 1);
+    let arr1 = input.forEach(value => value + 2).map(elements => console.log(elements));
     return arr1;
 };
-
-export default { votingRight, nameStudent, studentExist, underAge, totalStudents, forEachMap };
+//forEach always returns undefined unlike map which return the array as it puts up the error
+//cannot map undefined
+module.exports = { votingRight, nameStudent, studentExist, underAge, totalStudents, forEachMap };

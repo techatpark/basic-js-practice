@@ -45,5 +45,5 @@ test('total Students', () => {
 });
 
 test('do array.forEach.map', () => {
-    expect(forEachMap(ageGroup)).toBe();
+    expect(forEachMap(ageGroup)).toBe(1);
 });
