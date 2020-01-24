@@ -14,4 +14,4 @@ const totalStudents = input => {
     return total.length;
 };
 
-module.exports = { votingRight, nameStudent, studentExist, underAge, totalStudents };
+export default { votingRight, nameStudent, studentExist, underAge, totalStudents };

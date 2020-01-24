@@ -1,3 +1,4 @@
+/* eslint-disable no-const-assign */
 function scopes(input) {
     let x = input;
     var y = input;
