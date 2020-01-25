@@ -1,6 +1,5 @@
 const votingRight = input => {
-    let filtered = input.filter(a => a.age > 18);
-    return filtered.map(b => b.name);
+    return input.filter(a => a.age > 18).map(b => b.name);
 };
 
 const nameStudent = input => input.map(a => a.name);
@@ -15,9 +14,14 @@ const totalStudents = input => {
 };
 
 const forEachMap = input => {
-    let arr1 = input.forEach(value => value + 2).map(elements => console.log(elements));
+    // eslint-disable-next-line prettier/prettier
+    let arr1 = input.filter(value => value<40).map(value => value +1)
     return arr1;
 };
+/*const forMap = input => {
+    let arr1 = input.forEach(value => value + 2).map(elements => console.log(elements));
+    return arr1;
+};*/
 //forEach always returns undefined unlike map which return the array as it puts up the error
 //cannot map undefinede
 module.exports = { votingRight, nameStudent, studentExist, underAge, totalStudents, forEachMap };
