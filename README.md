@@ -11,6 +11,9 @@ Step by step guide to get started with Javascript
 
 ### Variables
 
+### Arrays
+https://www.youtube.com/watch?v=y-Bfgellcog
 
-
+### History
+https://www.youtube.com/watch?v=Sh6lK57Cuk4
 
