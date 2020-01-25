@@ -1,13 +1,4 @@
-import { printer } from '../src/class';
-
-class Car {
-    constructor(make, model, year) {
-        (this.make = make), (this.model = model), (this.year = year);
-    }
-    printThis() {
-        return `${this.make} ${this.model} has been made in ${this.year}`;
-    }
-}
+import { printer, Car } from '../src/class';
 
 let car1 = new Car('honda', 'city', 1993);
 
