@@ -11,4 +11,10 @@ class PersonClass {
         return `${this.name} has a friend named ${name}`;
     }
 }
-export { PersonClass };
+
+class Professor extends PersonClass {
+    teach(subject) {
+        return `${this.name} teaches ${subject}`;
+    }
+}
+export { PersonClass, Professor };
