@@ -9,7 +9,7 @@ function Person(name, age, gender) {
 function teacher(name, age, gender, subject) {
     Person.call(this, name, age, gender);
     this.subject = subject;
-    this.teaching = () => `${this.name} teaches ${this.subject}`;
+    this.teach = () => `${this.name} teaches ${this.subject}`;
 }
 
 export { Person, teacher };
