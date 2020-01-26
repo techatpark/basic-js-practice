@@ -1,21 +1,20 @@
 import { Person } from '../src/object';
 import { PersonClass } from '../src/class';
-
-test('Test Basic Object Creation', () => {
-    const person = new Person('Sathish', 27, 'Male');
-    const person_withNew = new Person('Sathish', 27, 'Male');
-    const person_withPrototype = Object.create(person);
-    // There are two  instances of the function object 'friend'
-    expect(person.friend === person_withNew.friend).toBe(false);
-
-    // There is only one instances of the function object 'friend'
-    expect(person.friend === person_withPrototype.friend).toBe(true);
+// when using constructor function
+test('No. of methods alloted when using constructor function', () => {
+    const p = new Person('karthick', 22, 'M');
+    const q = new Person('karthick', 22, 'M');
+    expect(p.friend === q.friend).toBe(false);
+    //It gives false as two different memory space is
+    //getting alloted hence the test : false
+    // to solve this we use create method
+    const r = Object.create(p);
+    expect(p.friend === r.friend).toBe(true);
 });
 
-test('Test Basic Object Creation through Class', () => {
-    const person = new PersonClass('Sathish', 27, 'Male');
-    const person_withNew = new PersonClass('Sathish', 27, 'Male');
-
-    // There is only one instances of the function object 'friend'
-    expect(person.friend === person_withNew.friend).toBe(true);
+//when using Class
+test('No. of methods alloted when using class', () => {
+    const p = new PersonClass('karthick', 22, 'M');
+    const q = new PersonClass('karthick', 22, 'M');
+    expect(p.friend === q.friend).toBe(true);
 });
