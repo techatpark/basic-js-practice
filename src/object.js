@@ -6,4 +6,10 @@ function Person(name, age, gender) {
     this.friend = name => `${this.name} has a friend named ${name}`;
 }
 
-export { Person };
+function teacher(name, age, gender, subject) {
+    Person.call(this, name, age, gender);
+    this.subject = subject;
+    this.teaching = () => `${this.name} teaches ${this.subject}`;
+}
+
+export { Person, teacher };
