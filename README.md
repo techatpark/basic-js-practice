@@ -32,3 +32,4 @@ https://www.youtube.com/watch?v=Sh6lK57Cuk4
 https://nodejs.org/api/esm.html
 9. https://www.freecodecamp.org/news/applications-of-the-reduce-function-in-javascript/
 10. https://www.developerdrive.com/4-ways-to-create-an-object-in-javascript-with-examples/
+11. https://www.hackerrank.com/challenges/js10-inheritance/topics/javascript-classes
