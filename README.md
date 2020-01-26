@@ -31,4 +31,4 @@ https://www.youtube.com/watch?v=Sh6lK57Cuk4
 8. https://www.jackfranklin.co.uk/blog/javascript-variable-scope-this/
 https://nodejs.org/api/esm.html
 9. https://www.freecodecamp.org/news/applications-of-the-reduce-function-in-javascript/
-
+10. https://www.developerdrive.com/4-ways-to-create-an-object-in-javascript-with-examples/
