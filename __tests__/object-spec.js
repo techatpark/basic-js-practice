@@ -1,37 +1,22 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-prototype-builtins */
-import { Person, Teacher } from '../src/object';
+import { Person, teacher } from '../src/object';
 import { PersonClass } from '../src/class';
 
-test('check Object creation', () => {
+test('Test Basic Object Creation', () => {
     const p = new Person('Sathish', 27, 'Male');
-    const q = Object.create(p);
-    q.name = 'karthick';
-    q.age = 22;
-    q.gender = 'M';
-    //expect(p.age).toBe(27);
-
-    //expect(p.speak('tamil')).toBe('Sathish speaks tamil');
-    expect(p.friend('senthil') === q.friend('Ravi')).toBe(true);
-});
-
-test('check Object creation through class', () => {
-    const p = new PersonClass('Sathish', 27, 'Male');
-    const q = new PersonClass('Karthick', 22, 'Male');
     expect(p.age).toBe(27);
-
     expect(p.speak('tamil')).toBe('Sathish speaks tamil');
-    expect(p.friend('senthil') === q.friend('Rahul')).toBe(false);
+    expect(p.friend('senthil')).toBe('Sathish has a friend named senthil');
 });
 
-test('understanding inheritance', () => {
-    const p = new Teacher('Karthick', 22, 'Male', 'Science');
-    Object.defineProperty(Person, interest, {
-        value: 'Swimming',
-        writable: true,
-    });
-    console.log(Person.hasOwnProperty('interest'));
+test('Test Basic Object Creation through class', () => {
+    const p = new PersonClass('Sathish', 27, 'Male');
+    expect(p.age).toBe(27);
+    expect(p.speak('tamil')).toBe('Sathish speaks tamil');
+    expect(p.friend('senthil')).toBe('Sathish has a friend named senthil');
+});
+
+test('Test Basic Object Creation with inheritance', () => {
+    const p = new teacher('Karthick', 22, 'Male', 'Science');
     expect(p.subject).toBe('Science');
-    expect(p.teach()).toBe('Karthick teaches Science');
-    expect(p.name).toBe('Karthick');
+    expect(p.teaching()).toBe('Karthick teaches Science');
 });
