@@ -35,3 +35,4 @@ https://nodejs.org/api/esm.html
 11. https://www.hackerrank.com/challenges/js10-inheritance/topics/javascript-classes
 12. https://oprea.rocks/blog/what-do-the-three-dots-mean-in-javascript/
 https://nodejs.org/api/esm.html
+13.https://dev.to/tomekbuszewski/singleton-in-javascript-1d5i
