@@ -1,49 +1,13 @@
-import { votingRight, nameStudent, studentExist, underAge, totalStudents, forEachMap } from '../src/array';
-const student = [
-    {
-        name: 'Rahul',
-        age: 22,
-        marks: 90,
-    },
-    {
-        name: 'Peter',
-        age: 17,
-        marks: 60,
-    },
-    {
-        name: 'Suresh',
-        age: 20,
-        marks: 80,
-    },
-    {
-        name: 'Rahul',
-        age: 16,
-        marks: 100,
-    },
-];
+import { Person } from '../src/object';
+// The Array.from() method creates a new,
+// shallow-copied Array instance from an array-
+// shallocopy-Deep copy
+const people = [new Person('Sathish', 37, 'Male'), new Person('Sathish', 37, 'Male')];
 
-const ageGroup = [1, 21, 33, 45, 56, 96];
+// No Samples
 
-test('Students voting right', () => {
-    expect(votingRight(student)).toStrictEqual(['Rahul', 'Suresh']);
-});
+test('Lets test Array From', () => {});
 
-test('students print their names', () => {
-    expect(nameStudent(student)).toStrictEqual(['Rahul', 'Peter', 'Suresh', 'Rahul']);
-});
+test('Lets test Array Destructuring', () => {});
 
-test('Does student Exist', () => {
-    expect(studentExist(student)).toBe(true);
-});
-
-test('Are there any underage students', () => {
-    expect(underAge(student)).toBe(true);
-});
-
-test('total Students', () => {
-    expect(totalStudents(student)).toBe(4);
-});
-
-test('do array.forEach.map', () => {
-    expect(forEachMap(ageGroup)).toBe(1);
-});
+test('Lets test Array reduce', () => {});
