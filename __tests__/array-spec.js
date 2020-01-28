@@ -61,5 +61,22 @@ test('Pushing towards the end', () => {
 //and makes copies of dynamically allocated memory pointed to by the fields.
 //A deep copy occurs when an object is copied along with the objects to which it refers.
 
-//Testing in
-test('understanding singleton', () => {});
+//Here we will loook at example of shallow copy
+test('Shallow copy examples', () => {
+    const p = new Person('Karthick', 22, 'M');
+    const q = p; //this is a shallow copy
+    q.name = 'Suresh';
+    expect(p.name).toBe('Suresh'); //This results true the both are refernced to the same memory
+});
+
+//now let us look at deep copy
+test('Deep copy examples', () => {
+    const p = new Person('Karthick', 22, 'M');
+    const q = {
+        name: p.name,
+        age: p.age,
+        gender: p.gender,
+    };
+    q.name = 'Suresh';
+    expect(p.name).toBe('Karthick'); //so here we have made a deep copy
+});
