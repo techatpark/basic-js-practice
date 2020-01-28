@@ -17,4 +17,22 @@ class Professor extends PersonClass {
         return `${this.name} teaches ${subject}`;
     }
 }
-export { PersonClass, Professor };
+
+class SingletonPersonClass {
+    constructor(name, age, gender) {
+        if (SingletonPersonClass.instance) {
+            return SingletonPersonClass.instance;
+        }
+        SingletonPersonClass.instance = this;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+    speak(language) {
+        return `${this.name} speaks ${language}`;
+    }
+    friend(name) {
+        return `${this.name} has a friend named ${name}`;
+    }
+}
+export { PersonClass, Professor, SingletonPersonClass };
