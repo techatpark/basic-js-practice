@@ -3,7 +3,6 @@ import { Person } from '../src/object';
 // shallow-copied Array instance from an array-
 // shallocopy-Deep copy
 const people = [new Person('Karthick', 22, 'Male'), new Person('Sathish', 37, 'Male'), new Person('Kumar', 28, 'Male')];
-
 //here let us learn about the Various array methods
 //starting from destructuring
 
@@ -82,7 +81,7 @@ test('Deep copy examples', () => {
 });
 // there is one more way to test deep copy using spread operator;
 test('deep copy using spread operator', () => {
-    const p = [...people];
+    const p = [...people].push(new Person('ravi', 22, 'M'));
     p.push(new Person('ravi', 22, 'M'));
     expect(p.length).toBe(4);
     expect(people.length).toBe(3);
@@ -96,4 +95,65 @@ test('shallow copy direct allocation', () => {
     expect(people.length).toBe(4);
 });
 
-//using multiple functions together.
+//Array.from()
+test('array.from()', () => {
+    const p = [...people];
+    let fromArray = Array.from(p);
+    expect(fromArray[0].name).toBe('Karthick');
+});
+
+//Array.splice() changes the contents of the array, by removing or replacing
+//and/or adding elements to the array
+//let us see its working
+test('array.splice', () => {
+    people.splice(1, 0, new Person('somebody', 28, 'Male'));
+    console.log(people); //so somebody is appended at index 1.
+    //now let us delete somebody.
+    people.splice(1, 1);
+    console.log(people); //so we have deleted it.
+});
+
+//Array.of() directly takes the argument and converts it into array
+test('Array.of()', () => {
+    expect(Array.of(3)).toStrictEqual([3]); //while array() creates that many empty slots
+    expect(Array(3)).toEqual([undefined, undefined, undefined]);
+});
+
+//next- array.copyithin()
+test('Array.copyWithin()', () => {
+    console.log(people.copyWithin(1, 2));
+});
+
+//array.concat()
+test('Array.concat()', () => {
+    const r = [new Person('Sekhar', 45, 'M')];
+    let p = r.concat(people);
+    console.log(p);
+});
+
+//array.isArray() checks if the given file is an array
+test('Array.isArray()', () => {
+    expect(Array.isArray(people)).toBe(true);
+    expect(Array.isArray(Person)).toBe(false);
+});
+
+//Array.sort
+test('array sorting', () => {
+    console.log(people.map(element => element.name).sort());
+    //aranges in alphabetic order.
+});
+
+//array.flat()
+test('Array.flat', () => {
+    const p = [1, 2, [3, 4, 5], 6, [7, 8]];
+    //console.log(people.flat()); // so it only affects nested arrays.
+    console.log(p.flat(1)); //if lot of nested is: use flat(infinity);
+    expect(p.flat(1)).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+});
+//array.flatmap
+test('flatmap()', () => {
+    const p = [1, 2, 3, 4, 5, 6, 7, 8];
+    //the flat map first maps the elements then flatens it to depth 1;
+    console.log(p.flatMap(element => element * 2));
+    expect(p.flatMap(element => element * 2)).toStrictEqual([2, 4, 6, 8, 10, 12, 14, 16]);
+});
