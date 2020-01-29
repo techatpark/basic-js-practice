@@ -80,3 +80,20 @@ test('Deep copy examples', () => {
     q.name = 'Suresh';
     expect(p.name).toBe('Karthick'); //so here we have made a deep copy
 });
+// there is one more way to test deep copy using spread operator;
+test('deep copy using spread operator', () => {
+    const p = [...people];
+    p.push(new Person('ravi', 22, 'M'));
+    expect(p.length).toBe(4);
+    expect(people.length).toBe(3);
+});
+
+//same without using spread operator
+test('shallow copy direct allocation', () => {
+    const p = people;
+    p.push(new Person('ravi', 22, 'M'));
+    expect(p.length).toBe(4);
+    expect(people.length).toBe(4);
+});
+
+//using multiple functions together.
