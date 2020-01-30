@@ -157,3 +157,8 @@ test('flatmap()', () => {
     console.log(p.flatMap(element => element * 2));
     expect(p.flatMap(element => element * 2)).toStrictEqual([2, 4, 6, 8, 10, 12, 14, 16]);
 });
+
+//how to print tables
+test('Print the people array in a table format', () => {
+    console.table(people);
+});
