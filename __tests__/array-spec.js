@@ -1,4 +1,4 @@
-import { Person } from '../src/object';
+import { Person, Scientist } from '../src/object';
 // The Array.from() method creates a new,
 // shallow-copied Array instance from an array-
 // shallocopy-Deep copy
@@ -161,4 +161,21 @@ test('flatmap()', () => {
 //how to print tables
 test('Print the people array in a table format', () => {
     console.table(people);
+});
+
+// here we will look at a new class
+
+const scientist = [
+    new Scientist('Albert Einstein', 'M', ['E= mc^2', ' General relativity'], '14 March 1879'),
+    new Scientist('Satyendra Nath Bose', 'M', ['Bose Einstein condensate', ' Photons'], '1 January 1894'),
+    new Scientist('Kalpana Chawla', 'F', ['She was the First women to go to space '], '1 July 1961'),
+];
+
+test('Print all the achievements of the scientist along with their name', () => {
+    scientist.forEach(element => console.log(element.achievement()));
+    //Now let us see who is the oldest scientist.
+});
+
+test('Who is the oldest scientist?', () => {
+    console.log(scientist.sort((a, b) => a.dateOfBirth - b.dateOfBirth)[0].name);
 });

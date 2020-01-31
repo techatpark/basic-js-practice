@@ -12,4 +12,16 @@ function teacher(name, age, gender, subject) {
     this.teach = () => `${this.name} teaches ${this.subject}`;
 }
 
-export { Person, teacher };
+class Scientist {
+    constructor(name, gender, contribution, dateOfBirth) {
+        this.name = name;
+        this.gender = gender;
+        this.dateOfBirth = new Date(dateOfBirth);
+        this.contribution = contribution;
+    }
+    achievement() {
+        return `${this.name} has contributed the following:\n ${this.contribution}`;
+    }
+}
+
+export { Person, teacher, Scientist };
