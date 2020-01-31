@@ -11,8 +11,8 @@ const people = [
 //starting from destructuring
 
 test('Array destructuring method', () => {
-    const [myDetails, ...restOfThem] = people;
-    expect(myDetails.age).toBe(22);
+    const [firstPerson, ...restOfThem] = people;
+    expect(firstPerson.age).toBe(22);
     expect(restOfThem[0].friend('Senthil')).toBe('Sathish has a friend named Senthil');
 });
 
@@ -21,7 +21,12 @@ test('Array destructuring method', () => {
 
 test('Reduce method', () => {
     const array = people.map(element => element.age);
-    expect(array.reduce((accumulator, currentValue) => accumulator + currentValue)).toBe(87);
+    //here accumulator keeps track of the sum, it acts like a sum and initialised to zero
+    expect(
+        array.reduce(function(accumulator, currentvalue) {
+            return currentvalue + accumulator;
+        }, 0),
+    ).toBe(87);
 });
 
 //Now let us understand some very basic array methods
