@@ -14,7 +14,7 @@ test('No. of methods alloted when using constructor function', () => {
 
 //when using Class
 test('No. of methods alloted when using class', () => {
-    const p = new PersonClass('karthick', 22, 'M');
+    const p = new PersonClass('2020', 22, 'M');
     const q = new PersonClass('karthick', 22, 'M');
     expect(p.friend === q.friend).toBe(true);
 });

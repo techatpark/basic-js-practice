@@ -2,7 +2,11 @@ import { Person, Scientist } from '../src/object';
 // The Array.from() method creates a new,
 // shallow-copied Array instance from an array-
 // shallocopy-Deep copy
-const people = [new Person('Karthick', 22, 'Male'), new Person('Sathish', 37, 'Male'), new Person('Kumar', 28, 'Male')];
+const people = [
+    new Person('Karthick', 22, 'Male'), // This is Sample Array
+    new Person('Sathish', 37, 'Male'),
+    new Person('Kumar', 28, 'Male'),
+];
 //here let us learn about the Various array methods
 //starting from destructuring
 
