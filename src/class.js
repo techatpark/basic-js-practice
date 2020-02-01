@@ -35,4 +35,23 @@ class SingletonPersonClass {
         return `${this.name} has a friend named ${name}`;
     }
 }
-export { PersonClass, Professor, SingletonPersonClass };
+
+class Employee {
+    constructor(name, age, id, gender) {
+        this.name = name;
+        this.age = age;
+        this.id = id;
+        this.gender = gender;
+    }
+}
+let employeesUnderMe = [];
+class Manager extends Employee {
+    add(...junior) {
+        employeesUnderMe.push(...junior);
+        return this;
+    }
+    employees() {
+        console.log(employeesUnderMe);
+    }
+}
+export { PersonClass, Professor, SingletonPersonClass, Manager, Employee, employeesUnderMe };

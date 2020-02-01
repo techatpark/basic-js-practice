@@ -1,4 +1,4 @@
-import { Professor, SingletonPersonClass } from '../src/class';
+import { Professor, SingletonPersonClass, Employee, Manager, employeesUnderMe } from '../src/class';
 import { PersonBuilder, Person } from '../src/object';
 
 test('inheritance in class', () => {
@@ -25,3 +25,10 @@ test('Trying Test Builder', () => {
 });
 //in the above problem only one instance is created.
 //so no matter how many additional instances are declared it only returns one.
+
+test('Defining composite functions', () => {
+    let managerSathish = new Manager('Sathish', 37, 200091, 'M');
+    let employee = new Employee('Karthick', 22, 12334, 'M');
+    let juniorManager = new Manager('Rabi', 47, 12335, 'M');
+    managerSathish.add(employee, juniorManager).employees();
+});
