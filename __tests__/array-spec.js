@@ -23,11 +23,7 @@ test('Reduce method', () => {
     const array = people.map(element => element.age);
     //here accumulator keeps track of the sum, it acts like a sum and initialised to zero
     expect(
-        array.reduce(function(accumulator, currentvalue) {
-            return currentvalue + accumulator;
-        }, 0),
-    ).toBe(87);
-});
+        array.reduce(((acc, cur)=> acc+cur),0)).toBe(87);
 
 //Now let us understand some very basic array methods
 //Starting from array.push(), array.pop(), and array.shift()
@@ -185,6 +181,6 @@ test('Print all the achievements of the scientist along with their name', () => 
     //Now let us see who is the oldest scientist.
 });
 
-test('Who is the oldest scientist?', () => {
-    console.log(scientist.sort((a, b) => a.dateOfBirth - b.dateOfBirth)[0].name);
-});
+//test('Who is the oldest scientist?', () => {
+    //console.log(scientist.sort((a, b) => a.dateOfBirth - b.dateOfBirth)[0].name);
+//});

@@ -2,8 +2,8 @@ function Person(name, age, gender) {
     this.name = name;
     this.age = age;
     this.gender = gender;
-    this.speak = language => `${this.name} speaks ${language}`;
-    this.friend = name => `${this.name} has a friend named ${name}`;
+    /* this.speak = language => `${this.name} speaks ${language}`;
+    this.friend = name => `${this.name} has a friend named ${name}`;*/
 }
 
 function teacher(name, age, gender, subject) {
@@ -24,4 +24,28 @@ class Scientist {
     }
 }
 
-export { Person, teacher, Scientist };
+function PersonBuilder() {
+    let name;
+    let age;
+    let gender;
+
+    return {
+        setName: function(name) {
+            this.name = name;
+            return this;
+        },
+        setAge: function(age) {
+            this.age = age;
+            return this;
+        },
+        setGender: function(gender) {
+            this.gender = gender;
+            return this;
+        },
+        Build: function() {
+            return new Person(name, age, gender);
+        },
+    };
+}
+
+export { Person, teacher, Scientist, PersonBuilder };
