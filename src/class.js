@@ -84,8 +84,8 @@ class NewsAgency {
     constructor() {
         this.subscribers = [];
     }
-    addSubscribers(...channels) {
-        this.subscribers.push(...channels);
+    addSubscribers(channel, type) {
+        this.subscribers.push(channel, type);
         return this;
     }
     unsubscribe(channel) {
@@ -95,14 +95,19 @@ class NewsAgency {
             }
         }
     }
-    transmit(news) {
-        this.subscribers.forEach(subscriber => subscriber.receive(news));
+    transmit(news, newstype) {
+        this.subscribers.forEach(subscriber => {
+            if (subscriber.type === newstype) {
+                subscriber.receive(news);
+            }
+        });
     }
 }
 
 class Channel {
-    constructor(name) {
+    constructor(name, type) {
         this.name = name;
+        this.type = type;
     }
     receive(news) {
         console.log(`${this.name}: ${news} `);
