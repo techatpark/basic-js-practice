@@ -1,4 +1,4 @@
-import { Professor, SingletonPersonClass, Employee, Manager, employeesUnderMe } from '../src/class';
+import { Professor, SingletonPersonClass, Employee, Manager } from '../src/class';
 import { PersonBuilder, Person } from '../src/object';
 
 test('inheritance in class', () => {
