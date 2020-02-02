@@ -42,7 +42,11 @@ test('Defining composite functions', () => {
 //console.log is not allowed in src file.
 
 test('News transmitting', () => {
-    let Hindu = new Channel('The Hindu');
-    let Dinamalar = new Channel('Dinamalar');
-expect(x.()).toBe();
+    const hindu = new Channel('The Hindu');
+    const dinamalar = new Channel('Dinamalar');
+    const newsAgency = new NewsAgency();
+
+    newsAgency.addSubscribers(hindu).addSubscribers(dinamalar);
+    newsAgency.transmit('NEWS');
+    expect(true).toBe(true);
 });
