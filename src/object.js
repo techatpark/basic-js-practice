@@ -25,9 +25,9 @@ class Scientist {
 }
 
 function PersonBuilder() {
-    let name;
-    let age;
-    let gender;
+    //    let name;
+    //    let age;
+    //    let gender;
 
     return {
         setName: function(name) {
@@ -43,7 +43,7 @@ function PersonBuilder() {
             return this;
         },
         Build: function() {
-            return new Person(name, age, gender);
+            return new Person(this.name, this.age, this.gender);
         },
     };
 }

@@ -1,5 +1,5 @@
-import { Professor, SingletonPersonClass, Employee, Manager } from '../src/class';
-import { PersonBuilder, Person } from '../src/object';
+import { Professor, SingletonPersonClass, Employee, Manager, EmployeeBuilder, TVChannel, News } from '../src/class';
+//import { PersonBuilder } from '../src/object';
 
 test('inheritance in class', () => {
     const p = new Professor('Karthick', 22, 'M');
@@ -17,11 +17,13 @@ test('How singleton class works', () => {
 });
 
 test('Trying Test Builder', () => {
-    let people = new PersonBuilder()
-        .setName('karthick')
-        .setAge(22)
-        .setGender('M');
-    console.log(people);
+    let Sathish = new EmployeeBuilder()
+        .setName('Sathish')
+        .setAge(37)
+        .setId(109293)
+        .setGender('M')
+        .build();
+    console.log(Sathish);
 });
 //in the above problem only one instance is created.
 //so no matter how many additional instances are declared it only returns one.
@@ -30,5 +32,11 @@ test('Defining composite functions', () => {
     let managerSathish = new Manager('Sathish', 37, 200091, 'M');
     let employee = new Employee('Karthick', 22, 12334, 'M');
     let juniorManager = new Manager('Rabi', 47, 12335, 'M');
-    managerSathish.add(employee, juniorManager).employees();
+    console.log(managerSathish.add(employee, juniorManager).employees());
 });
+
+test('getters and setters', () => {
+    let local = new TVChannel('Sun TV', 'General');
+    console.log(local);
+});
+//console.log is not allowed in src file.
