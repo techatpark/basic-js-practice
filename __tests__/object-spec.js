@@ -36,7 +36,17 @@ test('Defining composite functions', () => {
 });
 
 test('News transmitting', () => {
+<<<<<<< HEAD
     let Hindu = new Channel('The Hindu');
     let Dinamalar = new Channel('Dinamalar');
     let timesOfIndia = new Channel('timesOfIndia');
+=======
+    const hindu = new Channel('The Hindu');
+    const dinamalar = new Channel('Dinamalar');
+    const newsAgency = new NewsAgency();
+
+    newsAgency.addSubscribers(hindu).addSubscribers(dinamalar);
+    newsAgency.transmit('NEWS');
+    expect(true).toBe(true);
+>>>>>>> 371f9820d72328b2582c111777dee70d0dff502e
 });

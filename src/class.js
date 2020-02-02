@@ -86,6 +86,7 @@ class NewsAgency {
     }
     addSubscribers(...channels) {
         this.subscribers.push(...channels);
+        return this;
     }
     unsubscribe(channel) {
         for (let i = 0; i < this.subscribers.length; i++) {
@@ -104,7 +105,7 @@ class Channel {
         this.name = name;
     }
     receive(news) {
-        return `${this.name}: ${news} `;
+        console.log(`${this.name}: ${news} `);
     }
 }
 export { PersonClass, Professor, SingletonPersonClass, Manager, Employee, EmployeeBuilder, Channel, NewsAgency };
