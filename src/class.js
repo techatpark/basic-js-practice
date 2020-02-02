@@ -80,49 +80,6 @@ class EmployeeBuilder {
         return new Employee(this.name, this.age, this.id, this.gender);
     }
 }
-
-/*class News {
-    constructor(message, topic) {
-        this._message = message;
-        this._topic = topic;
-    }
-    get message() {
-        return this._message;
-    }
-    get topic() {
-        return this._topic;
-    }
-
-    set message(value) {
-        this._message = value;
-    }
-
-    set topic(value) {
-        this._topic = value;
-    }
-}
-
-class TVChannel {
-    constructor(name, type) {
-        this._name = name;
-        this._type = type;
-    }
-    get name() {
-        return this._name;
-    }
-    get topic() {
-        return this._topic;
-    }
-
-    set name(value) {
-        this._name = value;
-    }
-
-    set topic(value) {
-        this._topic = value;
-    }
-}*/
-//subject
 class NewsAgency {
     constructor() {
         this.subscribers = [];

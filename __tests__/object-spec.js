@@ -35,14 +35,8 @@ test('Defining composite functions', () => {
     console.log(managerSathish.add(employee, juniorManager).employees());
 });
 
-/*test('getters and setters', () => {
-    let local = new TVChannel('Sun TV', 'General');
-    console.log(local);
-});*/
-//console.log is not allowed in src file.
-
 test('News transmitting', () => {
     let Hindu = new Channel('The Hindu');
     let Dinamalar = new Channel('Dinamalar');
-expect(x.()).toBe();
+    let timesOfIndia = new Channel('timesOfIndia');
 });
