@@ -81,7 +81,7 @@ class EmployeeBuilder {
     }
 }
 
-class News {
+/*class News {
     constructor(message, topic) {
         this._message = message;
         this._topic = topic;
@@ -121,6 +121,33 @@ class TVChannel {
     set topic(value) {
         this._topic = value;
     }
+}*/
+//subject
+class NewsAgency {
+    constructor() {
+        this.subscribers = [];
+    }
+    addSubscribers(...channels) {
+        this.subscribers.push(...channels);
+    }
+    unsubscribe(channel) {
+        for (let i = 0; i < this.subscribers.length; i++) {
+            if (this.subscribers[i] === channel) {
+                this.subscribers.splice(i, 1);
+            }
+        }
+    }
+    transmit(news) {
+        this.subscribers.forEach(subscriber => subscriber.receive(news));
+    }
 }
 
-export { PersonClass, Professor, SingletonPersonClass, Manager, Employee, EmployeeBuilder, TVChannel, News };
+class Channel {
+    constructor(name) {
+        this.name = name;
+    }
+    receive(news) {
+        return `${this.name}: ${news} `;
+    }
+}
+export { PersonClass, Professor, SingletonPersonClass, Manager, Employee, EmployeeBuilder, Channel, NewsAgency };

@@ -1,4 +1,4 @@
-import { Professor, SingletonPersonClass, Employee, Manager, EmployeeBuilder, TVChannel, News } from '../src/class';
+import { Professor, SingletonPersonClass, Employee, Manager, EmployeeBuilder, Channel, NewsAgency } from '../src/class';
 //import { PersonBuilder } from '../src/object';
 
 test('inheritance in class', () => {
@@ -35,8 +35,14 @@ test('Defining composite functions', () => {
     console.log(managerSathish.add(employee, juniorManager).employees());
 });
 
-test('getters and setters', () => {
+/*test('getters and setters', () => {
     let local = new TVChannel('Sun TV', 'General');
     console.log(local);
-});
+});*/
 //console.log is not allowed in src file.
+
+test('News transmitting', () => {
+    let Hindu = new Channel('The Hindu');
+    let Dinamalar = new Channel('Dinamalar');
+expect(x.()).toBe();
+});
