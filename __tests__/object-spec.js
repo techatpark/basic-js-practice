@@ -1,4 +1,14 @@
-import { Professor, SingletonPersonClass, Employee, Manager, EmployeeBuilder, Channel, NewsAgency } from '../src/class';
+import {
+    Professor,
+    SingletonPersonClass,
+    Employee,
+    Manager,
+    EmployeeBuilder,
+    Channel,
+    NewsAgency,
+    Customer,
+    GooglePay,
+} from '../src/class';
 //import { PersonBuilder } from '../src/object';
 
 test('inheritance in class', () => {
@@ -49,4 +59,14 @@ test('News transmitting', () => {
         .addSubscribers(thanthi, 'Political');
     newsAgency.transmit('Vadivelu Comedy', 'Entertainment');
     expect(true).toBe(true);
+});
+// here let us look at mediator patterns
+
+test('Mediator patterns', () => {
+    let googlePay = new GooglePay();
+    let karthick = new Customer('Karthick');
+    let sathish = new Customer('Sathish');
+    let aravind = new Customer('Aravind');
+
+    karthick.send(1000, 'Sathish');
 });

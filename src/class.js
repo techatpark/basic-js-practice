@@ -113,4 +113,44 @@ class Channel {
         console.log(`${this.name}: ${news} `);
     }
 }
-export { PersonClass, Professor, SingletonPersonClass, Manager, Employee, EmployeeBuilder, Channel, NewsAgency };
+
+//Mediator pattern, so here we are going to learn about mediator pattern
+//here we will try to build google pay pay and receive button
+class Customer {
+    constructor(name) {
+        this.name = name;
+    }
+    send(amount, to) {}
+    receive(amount, from) {
+        console.log(`Payment of ${amount} from ${from} to ${this.name} is succesful`);
+    }
+}
+
+class GooglePay {
+    constructor() {
+        this.customerBase = [];
+    }
+    register(name) {
+        this.customerBase.push(name);
+        return this;
+    }
+    send(amount, from, to) {
+        if (this.customerBase.filter(cust => cust === to)) {
+            to.receive(amount, from);
+        } else {
+            console.log('This customer does not exist');
+        }
+    }
+}
+export {
+    PersonClass,
+    Professor,
+    SingletonPersonClass,
+    Manager,
+    Employee,
+    EmployeeBuilder,
+    Channel,
+    NewsAgency,
+    GooglePay,
+    Customer,
+};
