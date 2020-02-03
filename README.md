@@ -36,3 +36,4 @@ https://nodejs.org/api/esm.html
 12. https://oprea.rocks/blog/what-do-the-three-dots-mean-in-javascript/
 https://nodejs.org/api/esm.html
 13.https://dev.to/tomekbuszewski/singleton-in-javascript-1d5i
+14. Regular expression: https://regex101.com/
