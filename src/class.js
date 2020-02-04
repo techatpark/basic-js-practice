@@ -37,11 +37,32 @@ class SingletonPersonClass {
 }
 
 class Employee {
-    constructor(name, age, id, gender) {
+    constructor(name, age, id, gender, salary_month) {
         this.name = name;
         this.age = age;
         this.id = id;
         this.gender = gender;
+        this.salary = salary_month;
+    }
+    GetSalary() {
+        return this.salary;
+    }
+    SetSalary(newSalary) {
+        this.salary = newSalary;
+    }
+    accept(visitorfunction) {
+        visitorfunction(this);
+    }
+}
+
+function taxOnEmployees(employee) {
+    //tax exemption for those earning below 30k
+    if (employee.GetSalary() < 30000) {
+        return employee.SetSalary(employee.GetSalary());
+    } else if (employee.GetSalary() < 50000) {
+        return employee.SetSalary(employee.GetSalary() * 0.8);
+    } else {
+        return employee.SetSalary(employee.GetSalary() * 0.6);
     }
 }
 
@@ -120,7 +141,9 @@ class Customer {
     constructor(name) {
         this.name = name;
     }
-    send(amount, to) {}
+    send(amount, to) {
+        new GooglePay().send(amount, this, to);
+    }
     receive(amount, from) {
         console.log(`Payment of ${amount} from ${from} to ${this.name} is succesful`);
     }
@@ -142,6 +165,9 @@ class GooglePay {
         }
     }
 }
+//visitor method
+//eg that we take here is taxing brackets
+
 export {
     PersonClass,
     Professor,
@@ -153,4 +179,5 @@ export {
     NewsAgency,
     GooglePay,
     Customer,
+    taxOnEmployees,
 };

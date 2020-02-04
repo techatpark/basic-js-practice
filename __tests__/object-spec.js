@@ -8,6 +8,7 @@ import {
     NewsAgency,
     Customer,
     GooglePay,
+    taxOnEmployees,
 } from '../src/class';
 //import { PersonBuilder } from '../src/object';
 
@@ -63,10 +64,24 @@ test('News transmitting', () => {
 // here let us look at mediator patterns
 
 test('Mediator patterns', () => {
-    let googlePay = new GooglePay();
     let karthick = new Customer('Karthick');
     let sathish = new Customer('Sathish');
     let aravind = new Customer('Aravind');
-
+    let googlepay = new GooglePay();
+    googlepay.register(karthick, sathish, aravind);
     karthick.send(1000, 'Sathish');
+});
+
+//here we will look into visitor patterns
+
+test('Visitor pattern', () => {
+    let karthick = new Employee('Karthick', 22, 12345, 'M', 15000);
+    let sathish = new Employee('Sathish', 37, 54321, 'M', 150000);
+    console.log(`salary of karthick before tax =  ${karthick.GetSalary()}`);
+    console.log(`salary of sathish before tax =  ${sathish.GetSalary()}`);
+    //Now we have to accept the tax rates on our income. :)
+    karthick.accept(taxOnEmployees);
+    console.log(`salary of karthick after tax =  ${karthick.GetSalary()}`);
+    sathish.accept(taxOnEmployees);
+    console.log(`salary of Sathish after tax =  ${sathish.GetSalary()}`);
 });
