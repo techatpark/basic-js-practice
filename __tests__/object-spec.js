@@ -69,7 +69,7 @@ test('Mediator patterns', () => {
     let aravind = new Customer('Aravind');
     let googlepay = new GooglePay();
     googlepay.register(karthick, sathish, aravind);
-    karthick.send(1000, 'Sathish');
+    googlepay.send(1000,'karthick', 'Sathish');
 });
 
 //here we will look into visitor patterns
