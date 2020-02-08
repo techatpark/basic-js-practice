@@ -141,12 +141,12 @@ class Customer {
     constructor(name) {
         this.name = name;
     }
-    send(amount, to) {
+    /*send(amount, to) {
         new GooglePay().send(amount, this, to);
     }
     receive(amount, from) {
         console.log(`Payment of ${amount} from ${from} to ${this.name} is succesful`);
-    }
+    }*/
 }
 
 class GooglePay {
@@ -158,10 +158,24 @@ class GooglePay {
         return this;
     }
     send(amount, from, to) {
-        if (this.customerBase.filter(cust => cust === to)) {
-            to.receive(amount, from);
-        } else {
-            console.log('This customer does not exist');
+        if(this.customerBase.filter(cust => cust === from)){
+            if (this.customerBase.filter(cust => cust === to)) {
+                to.receive(amount, from);
+            } else {
+                console.log('This customer does not exist');
+            }
+        }
+        else{
+            console.log("invalid sender, kindly register to start payment: ")
+            this.register(from)
+            console.log("you are registered trying to initiate payment")
+            if(this.customerBase.filter(cust => cust === from)){
+                if (this.customerBase.filter(cust => cust === to)) {
+                    to.receive(amount, from);
+                } else {
+                    console.log('Sorry registration not succesful');
+                }
+            }
         }
     }
 }
