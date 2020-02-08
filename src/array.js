@@ -1,3 +1,4 @@
+//adding a comment
 const votingRight = input => {
     return input.filter(a => a.age > 18).map(b => b.name);
 };

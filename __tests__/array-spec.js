@@ -9,7 +9,7 @@ const people = [
 ];
 //here let us learn about the Various array methods
 //starting from destructuring
-
+//adding a comment
 test('Array destructuring method', () => {
     const [firstPerson, ...restOfThem] = people;
     expect(firstPerson.age).toBe(22);

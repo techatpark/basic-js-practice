@@ -3,7 +3,7 @@
 /*
  * This will have example for basics topics in Javascript
  */
-
+//adding a comment
 const global_const = 90;
 
 /**

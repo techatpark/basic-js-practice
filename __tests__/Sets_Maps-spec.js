@@ -15,7 +15,7 @@ test('delete duplicate entries in an array', () => {
     teachers = [...temp];
     expect(teachers).toStrictEqual(['kiyoshi', 'Raja', 'Sursh', 'Peter']);
 });
-
+//adding a comment
 test('find no. of occurances', () => {
     const obj = new Object();
     function mode() {
