@@ -148,6 +148,7 @@ class Customer {
         console.log(`Payment of ${amount} from ${from} to ${this.name} is succesful`);
     }*/
 }
+//adding a comment
 
 class GooglePay {
     constructor() {

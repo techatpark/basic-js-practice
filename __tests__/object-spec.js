@@ -11,7 +11,7 @@ import {
     taxOnEmployees,
 } from '../src/class';
 //import { PersonBuilder } from '../src/object';
-
+//adding a comment
 test('inheritance in class', () => {
     const p = new Professor('Karthick', 22, 'M');
     expect(p.teach('Maths')).toBe('Karthick teaches Maths');
