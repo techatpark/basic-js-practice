@@ -161,22 +161,25 @@ class GooglePay {
     send(amount, from, to) {
         if (this.customerBase.filter(cust => cust === from)) {
             if (this.customerBase.filter(cust => cust === to)) {
-                to.receive(amount, from);
+                this.receive(amount, from);
             } else {
                 console.log('This customer does not exist');
             }
         } else {
-            console.log('invalid sender, kindly register to start payment: ');
+            console.log('invalid sender,registering to start payment');
             this.register(from);
             console.log('you are registered trying to initiate payment');
             if (this.customerBase.filter(cust => cust === from)) {
                 if (this.customerBase.filter(cust => cust === to)) {
-                    to.receive(amount, from);
+                    this.receive(amount, from);
                 } else {
                     console.log('Sorry registration not succesful');
                 }
             }
         }
+    }
+    receive(amount, from) {
+        console.log(`Payment of Rs.${amount} from ${from} is succesful`);
     }
 }
 //visitor method
