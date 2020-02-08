@@ -180,7 +180,3 @@ test('Print all the achievements of the scientist along with their name', () => 
     scientist.forEach(element => console.log(element.achievement()));
     //Now let us see who is the oldest scientist.
 });
-
-//test('Who is the oldest scientist?', () => {
-    //console.log(scientist.sort((a, b) => a.dateOfBirth - b.dateOfBirth)[0].name);
-//});
