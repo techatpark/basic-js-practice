@@ -9,6 +9,7 @@ import {
     Customer,
     GooglePay,
     taxOnEmployees,
+    PersonClass,
 } from '../src/class';
 //import { PersonBuilder } from '../src/object';
 //adding a comment
@@ -69,7 +70,7 @@ test('Mediator patterns', () => {
     let aravind = new Customer('Aravind');
     let googlepay = new GooglePay();
     googlepay.register(karthick, sathish, aravind);
-    googlepay.send(1000,'karthick', 'Sathish');
+    googlepay.send(1000, 'karthick', 'Sathish');
 });
 
 //here we will look into visitor patterns
@@ -84,4 +85,23 @@ test('Visitor pattern', () => {
     console.log(`salary of karthick after tax =  ${karthick.GetSalary()}`);
     sathish.accept(taxOnEmployees);
     console.log(`salary of Sathish after tax =  ${sathish.GetSalary()}`);
+});
+// Promises
+test('testing promises ', () => {
+    let student = new PersonClass('Karthick', 22, 'M');
+    //student.name = 'ragu';
+    // eslint-disable-next-line no-undef
+    let p = new Promise((resolve, reject) => {
+        if (student.name === 'Karthick') {
+            resolve('Student name has not changed');
+        } else {
+            reject('Student has changed the name');
+        }
+    });
+    //student.name = 'ragu';
+    p.then(message => {
+        console.log(message);
+    }).catch(message => {
+        console.log(message + ' due to mismatch');
+    });
 });

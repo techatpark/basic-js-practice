@@ -3,4 +3,4 @@ module.exports = {
         '\\.js$': 'babel-jest'
     }
   };
-  //adding a comment
+  
