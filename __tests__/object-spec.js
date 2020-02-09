@@ -106,3 +106,10 @@ test('testing promises ', () => {
         console.log(message + ' due to mismatch');
     });
 });
+
+test('Json objects', () => {
+    let karthick = new PersonClass('karthick', 33, 'M');
+    const json = JSON.stringify(karthick);
+    console.log(json);
+    console.log(JSON.parse(json));
+});
