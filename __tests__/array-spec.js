@@ -1,4 +1,5 @@
 import { Person, Scientist } from '../src/object';
+import { drop } from 'lodash';
 // The Array.from() method creates a new,
 // shallow-copied Array instance from an array-
 // shallocopy-Deep copy
@@ -18,12 +19,6 @@ test('Array destructuring method', () => {
 
 //Now let us understand array.reduce method
 //here we add up the ages of all the people in the array
-
-test('Reduce method', () => {
-    const array = people.map(element => element.age);
-    //here accumulator keeps track of the sum, it acts like a sum and initialised to zero
-    expect(
-        array.reduce(((acc, cur)=> acc+cur),0)).toBe(87);
 
 //Now let us understand some very basic array methods
 //Starting from array.push(), array.pop(), and array.shift()
@@ -179,4 +174,10 @@ const scientist = [
 test('Print all the achievements of the scientist along with their name', () => {
     scientist.forEach(element => console.log(element.achievement()));
     //Now let us see who is the oldest scientist.
+});
+
+test('Lodash solution', () => {
+    let people = ['ravi', 'Sathish', 'Karthick'];
+    drop([1, 2, 3]);
+    console.log(drop(people, 2));
 });
