@@ -6,4 +6,5 @@ test('decimal to binary', () => {
 
 test('finding max no. of ones', () => {
     console.log(maximumNumberOfOnes(30));
+    expect(maximumNumberOfOnes(13)).toBe(2);
 });
