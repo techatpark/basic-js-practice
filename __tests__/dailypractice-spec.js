@@ -1,5 +1,9 @@
 import { decimal2binary, maximumNumberOfOnes } from '../src/dailypractice';
 
 test('decimal to binary', () => {
-    //finding maximum number of consecutive one's
+    console.log(decimal2binary(25));
+});
+
+test('finding max no. of ones', () => {
+    console.log(maximumNumberOfOnes(30));
 });
