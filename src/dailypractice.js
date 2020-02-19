@@ -20,4 +20,15 @@ function maximumNumberOfOnes(n) {
     return max;
 }
 
-export { decimal2binary, maximumNumberOfOnes };
+function getMaxLessThanK(n, k) {
+    let max = 0;
+    for (let i = n; i >= 1; i--) {
+        for (let j = i - 1; j > 0; j--) {
+            if ((i & j) < k && (i & j) > max) {
+                max = i & j;
+            }
+        }
+    }
+    return max;
+}
+export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK };
