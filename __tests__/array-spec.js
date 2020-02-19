@@ -176,7 +176,7 @@ test('Print all the achievements of the scientist along with their name', () => 
     //Now let us see who is the oldest scientist.
 });
 
-test('Lodash solution', () => {
+test('Lodash arrays', () => {
     let people = ['ravi', 'Sathish', 'Karthick'];
     drop([1, 2, 3]);
     console.log(drop(people, 2));
