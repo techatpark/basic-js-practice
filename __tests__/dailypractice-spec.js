@@ -1,4 +1,4 @@
-import { decimal2binary, maximumNumberOfOnes, getMaxLessThanK } from '../src/dailypractice';
+import { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure } from '../src/dailypractice';
 
 test('decimal to binary', () => {
     console.log(decimal2binary(25));
@@ -12,7 +12,10 @@ test('finding max no. of ones', () => {
 test('finding max of A & B less than k', () => {
     expect(getMaxLessThanK(5, 3)).toBe(2);
     expect(getMaxLessThanK(Math.floor(Math.random() * 100), 5)).toBe(4);
-    expect(getMaxLessThanK(3, 3)).toBe(2); // so n = 3, k = 3 gives us 2
-    expect(getMaxLessThanK(5, 5)).toBe(4);
-    expect(getMaxLessThanK(14, 14)).toBe(12);
+    expect(getMaxLessThanKm(3, 3)).toBe(2);
+});
+
+test('understanding closures', () => {
+    let closh = closure('outerVariable');
+    closh('inner variable');
 });

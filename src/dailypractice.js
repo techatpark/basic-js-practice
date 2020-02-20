@@ -31,4 +31,23 @@ function getMaxLessThanK(n, k) {
     }
     return max;
 }
-export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK };
+
+function getMaxLessThanKm(n, k) {
+    if (n === k) {
+        if (n % 2 === 0) {
+            return k - 2;
+        } else {
+            return k - 1;
+        }
+    } else {
+        return k - 1;
+    }
+}
+
+function closure(outer) {
+    return inner => {
+        console.log(`I have accesed the ${outer} from inside`);
+        console.log(`this is ${inner}`);
+    };
+}
+export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure };
