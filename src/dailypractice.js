@@ -50,4 +50,13 @@ function closure(outer) {
         console.log(`this is ${inner}`);
     };
 }
-export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure };
+
+function quartiles(input) {
+    let array = input.split('\n');
+    let [len, list] = array;
+    len = len.map(Number);
+    list = list.map(Number);
+    return len, list;
+}
+
+export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure, quartiles };

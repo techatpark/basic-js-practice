@@ -1,4 +1,11 @@
-import { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure } from '../src/dailypractice';
+import {
+    decimal2binary,
+    maximumNumberOfOnes,
+    getMaxLessThanK,
+    quartiles,
+    getMaxLessThanKm,
+    closure,
+} from '../src/dailypractice';
 
 test('decimal to binary', () => {
     console.log(decimal2binary(25));
@@ -18,4 +25,8 @@ test('finding max of A & B less than k', () => {
 test('understanding closures', () => {
     let closh = closure('outerVariable');
     closh('inner variable');
+});
+
+test('quartiles', () => {
+    expect(quartiles(`9\n3 7 8 5 12 14 21 13 18`)).toBe(9, 12);
 });
