@@ -59,4 +59,20 @@ function quartiles(input) {
     return len, list;
 }
 
-export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure, quartiles };
+function fineCalculator(input) {
+    let [actDate, expDate] = input.split('\n');
+    let [actDay, actMonth, actYear] = actDate.split(' ').map(x => Number(x));
+    let [expDay, expMonth, expYear] = expDate.split(' ').map(x => Number(x));
+    const dayDiff = actDay - expDay;
+    const monthDiff = actMonth - expMonth;
+    const yearDiff = actYear - expYear;
+
+    return yearDiff > 0
+        ? 10000
+        : monthDiff > 0 && yearDiff === 0
+        ? monthDiff * 500
+        : dayDiff > 0 && yearDiff === 0
+        ? dayDiff * 15
+        : 0;
+}
+export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure, quartiles, fineCalculator };

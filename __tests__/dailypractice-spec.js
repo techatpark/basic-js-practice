@@ -5,6 +5,7 @@ import {
     quartiles,
     getMaxLessThanKm,
     closure,
+    fineCalculator,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -29,4 +30,8 @@ test('understanding closures', () => {
 
 test('quartiles', () => {
     expect(quartiles(`9\n3 7 8 5 12 14 21 13 18`)).toBe(9, 12);
+});
+
+test('fine calculator', () => {
+    console.log(fineCalculator('9 6 2015\n6 6 2015'));
 });
