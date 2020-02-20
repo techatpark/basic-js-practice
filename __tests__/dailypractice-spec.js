@@ -6,6 +6,7 @@ import {
     getMaxLessThanKm,
     closure,
     fineCalculator,
+    standardDeviation,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -34,4 +35,8 @@ test('quartiles', () => {
 
 test('fine calculator', () => {
     console.log(fineCalculator('9 6 2015\n6 6 2015'));
+});
+
+test('standard deviation', () => {
+expect(x.()).toBe();
 });

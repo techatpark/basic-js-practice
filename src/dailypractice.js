@@ -75,4 +75,36 @@ function fineCalculator(input) {
         ? dayDiff * 15
         : 0;
 }
-export { decimal2binary, maximumNumberOfOnes, getMaxLessThanK, getMaxLessThanKm, closure, quartiles, fineCalculator };
+
+const standardDeviation = (...a) => {
+    let array = [...a];
+    let n = array.length;
+
+    //finding the mean
+    let mean =
+        array.reduce((total, curr) => {
+            return total + curr;
+        }, 0) / n;
+
+    //finding the variance
+    let variance =
+        array
+            .map(x => Math.pow(x - mean))
+            .reduce((total, curr) => {
+                return total + curr;
+            }, 0) / n;
+
+    // finding the standard deviation
+
+    return Math.sqrt(variance).toFixed(1);
+};
+export {
+    decimal2binary,
+    maximumNumberOfOnes,
+    getMaxLessThanK,
+    standardDeviation,
+    getMaxLessThanKm,
+    closure,
+    quartiles,
+    fineCalculator,
+};
