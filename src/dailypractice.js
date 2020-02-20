@@ -98,6 +98,16 @@ const standardDeviation = input => {
     // finding the standard deviation
     return Number(Math.sqrt(variance).toFixed(1));
 };
+
+function try_catch_magic(input) {
+    try {
+        let n = parseInt(input);
+        isNaN(n) && k();
+        return n;
+    } catch (error) {
+        return 'Bad string';
+    }
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -107,4 +117,5 @@ export {
     closure,
     quartiles,
     fineCalculator,
+    try_catch_magic,
 };

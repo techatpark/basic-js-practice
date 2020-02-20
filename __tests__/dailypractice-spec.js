@@ -7,6 +7,7 @@ import {
     closure,
     fineCalculator,
     standardDeviation,
+    try_catch_magic,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -39,4 +40,9 @@ test('fine calculator', () => {
 
 test('standard deviation', () => {
     expect(standardDeviation('5\n10 40 30 50 20')).toBe(14.1);
+});
+
+test('try catch magic', () => {
+    expect(try_catch_magic('23')).toBe(23);
+    expect(try_catch_magic('hello world')).toBe('Bad string');
 });
