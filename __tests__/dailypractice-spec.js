@@ -38,5 +38,5 @@ test('fine calculator', () => {
 });
 
 test('standard deviation', () => {
-expect(x.()).toBe();
+    expect(standardDeviation('5\n10 40 30 50 20')).toBe(14.1);
 });

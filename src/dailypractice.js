@@ -76,9 +76,10 @@ function fineCalculator(input) {
         : 0;
 }
 
-const standardDeviation = (...a) => {
-    let array = [...a];
-    let n = array.length;
+const standardDeviation = input => {
+    let [n, array] = input.split('\n');
+    array = array.split(' ').map(x => Number(x));
+    n = Number(n);
 
     //finding the mean
     let mean =
@@ -89,14 +90,13 @@ const standardDeviation = (...a) => {
     //finding the variance
     let variance =
         array
-            .map(x => Math.pow(x - mean))
+            .map(x => Math.pow(x - mean, 2))
             .reduce((total, curr) => {
                 return total + curr;
             }, 0) / n;
 
     // finding the standard deviation
-
-    return Math.sqrt(variance).toFixed(1);
+    return Number(Math.sqrt(variance).toFixed(1));
 };
 export {
     decimal2binary,
