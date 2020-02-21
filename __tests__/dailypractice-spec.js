@@ -8,7 +8,7 @@ import {
     fineCalculator,
     standardDeviation,
     try_catch_magic,
-    interquartileRange,
+    interquartileRange,phoneBook,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -50,4 +50,8 @@ test('try catch magic', () => {
 
 test('interquartile range', () => {
     expect(interquartileRange('6\n6 12 8 10 20 16\n5 4 3 2 1 5')).toBe('9.0');
+});
+
+test('phone Book', () => {
+expect(x.()).toBe();
 });

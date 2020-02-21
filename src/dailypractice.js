@@ -167,6 +167,22 @@ function interquartileRange(input) {
         return Math.floor(q3 - q1).toFixed(1);
     }
 }
+
+function phoneBook(input) {
+    let array = input.split('\n');
+    array[0] = Number(array[0]);
+    let phoneBook = new Map();
+    for (let i = 1; i <= array[0]; i++) {
+        phoneBook.set(array[i].split(' ')[0], Number(array[i].split(' ')[1]));
+    }
+    for (let i = array[0] + 1; i < array.length; i++) {
+        if (phoneBook.has(array[i])) {
+            console.log(`${array[i]}=${phoneBook.get(array[i])}`);
+        } else {
+            console.log('Not found');
+        }
+    }
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -178,4 +194,5 @@ export {
     fineCalculator,
     try_catch_magic,
     interquartileRange,
+    phoneBook,
 };
