@@ -8,7 +8,8 @@ import {
     fineCalculator,
     standardDeviation,
     try_catch_magic,
-    interquartileRange,phoneBook,
+    interquartileRange,
+    phoneBook,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -53,5 +54,5 @@ test('interquartile range', () => {
 });
 
 test('phone Book', () => {
-expect(x.()).toBe();
+    phoneBook('3\nsam 99912222\ntom 11122222\nharry 12299933\nsam\nedward\nharry');
 });
