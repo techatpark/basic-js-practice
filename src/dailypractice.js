@@ -183,6 +183,30 @@ function phoneBook(input) {
         }
     }
 }
+
+class Calculator {
+    power(n, p) {
+        if (n < 0 || p < 0) throw 'n and p should be non-negative';
+        else {
+            return Math.pow(n, p);
+        }
+    }
+}
+function try_catch_throw(input) {
+    const myCalculator = new Calculator();
+    let array = input.split('\n');
+    array[0] = Number(array[0]);
+    for (let i = 1; i < array.length; i++) {
+        try {
+            let n = Number(array[i].split(' ')[0]);
+            let p = Number(array[i].split(' ')[1]);
+            const ans = myCalculator.power(n, p);
+            console.log(ans);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -195,4 +219,6 @@ export {
     try_catch_magic,
     interquartileRange,
     phoneBook,
+    try_catch_throw,
+    Calculator,
 };

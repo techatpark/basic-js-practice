@@ -10,6 +10,8 @@ import {
     try_catch_magic,
     interquartileRange,
     phoneBook,
+    Calculator,
+    try_catch_throw,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -55,4 +57,8 @@ test('interquartile range', () => {
 
 test('phone Book', () => {
     phoneBook('3\nsam 99912222\ntom 11122222\nharry 12299933\nsam\nedward\nharry');
+});
+
+test('try catch throw', () => {
+    try_catch_throw('4\n3 5\n2 4\n-1 -2\n-1 3');
 });
