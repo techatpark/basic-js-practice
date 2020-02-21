@@ -108,6 +108,65 @@ function try_catch_magic(input) {
         return 'Bad string';
     }
 }
+
+function interquartileRange(input) {
+    let [n, arr, freq] = input.split('\n');
+    let array = [];
+    arr = arr.split(' ').map(x => Number(x));
+    freq = freq.split(' ').map(x => Number(x));
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < freq[i]; j++) {
+            array.push(arr[i]);
+        }
+    }
+    array.sort((a, b) => a - b);
+    // till now only the sorting part is done getting into mainproblem
+
+    //here let's divide into quartiles and also find q1, q2
+    // so there are two possibilities no.1 array has odd no. of elements
+    // or it has even no. of elements;
+    n = array.length;
+    // if it has even no. of elements
+    if (n % 2 === 0) {
+        let arr1 = [],
+            q1 = 0,
+            q3 = 0;
+        let arr2 = [];
+        for (let i = 0; i < n / 2; i++) {
+            arr1.push(array[i]);
+            arr2.push(array[n - 1 - i]);
+        }
+        //finding quartile ranges of each;
+        let length = arr1.length;
+        if (length % 2 === 0) {
+            q1 = (arr1[length / 2] + arr1[length / 2 - 1]) / 2;
+            q3 = (arr2[length / 2] + arr2[length / 2 - 1]) / 2;
+        } else {
+            q1 = array[Math.floor(length / 2)];
+            q3 = array[n - Math.floor(length / 2) - 1];
+        }
+        return Math.floor(q3 - q1).toFixed(1);
+    } else {
+        let arr1 = [],
+            q1 = 0,
+            q3 = 0;
+        let arr2 = [];
+        for (let i = 0; i < Math.floor(n / 2); i++) {
+            arr1.push(array[i]);
+            arr2.push(array[n - 1 - i]);
+        }
+        //finding the quartile range of each
+        let length = arr1.length;
+        if (length % 2 === 0) {
+            q1 = (arr1[length / 2] + arr1[length / 2 - 1]) / 2;
+            q3 = (arr2[length / 2] + arr2[length / 2 - 1]) / 2;
+        } else {
+            q1 = array[Math.floor(length / 2)];
+            q3 = array[n - Math.floor(length / 2) - 1];
+        }
+        return Math.floor(q3 - q1).toFixed(1);
+    }
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -118,4 +177,5 @@ export {
     quartiles,
     fineCalculator,
     try_catch_magic,
+    interquartileRange,
 };

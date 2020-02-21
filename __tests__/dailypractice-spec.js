@@ -8,6 +8,7 @@ import {
     fineCalculator,
     standardDeviation,
     try_catch_magic,
+    interquartileRange,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -45,4 +46,8 @@ test('standard deviation', () => {
 test('try catch magic', () => {
     expect(try_catch_magic('23')).toBe(23);
     expect(try_catch_magic('hello world')).toBe('Bad string');
+});
+
+test('interquartile range', () => {
+    expect(interquartileRange('6\n6 12 8 10 20 16\n5 4 3 2 1 5')).toBe('9.0');
 });
