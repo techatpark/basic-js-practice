@@ -65,4 +65,6 @@ test('try catch throw', () => {
 
 test('plus minus', () => {
     plusMinus([-4, 3, -9, 0, 4, 1]);
+    let arr = new Array(2).join('#');
+    console.log(arr);
 });
