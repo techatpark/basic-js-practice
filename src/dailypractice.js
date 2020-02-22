@@ -207,6 +207,18 @@ function try_catch_throw(input) {
         }
     }
 }
+function plusMinus(arr) {
+    let p = 0,
+        n = 0,
+        z = 0,
+        len = arr.length;
+    for (let i = 0; i < len; i++) {
+        arr[i] > 0 ? (p += 1) : arr[i] < 0 ? (n += 1) : (z += 1);
+    }
+    console.log((p / len).toFixed(6));
+    console.log((n / len).toFixed(6));
+    console.log((z / len).toFixed(6));
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -221,4 +233,5 @@ export {
     phoneBook,
     try_catch_throw,
     Calculator,
+    plusMinus,
 };

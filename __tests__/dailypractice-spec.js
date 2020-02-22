@@ -10,7 +10,7 @@ import {
     try_catch_magic,
     interquartileRange,
     phoneBook,
-    Calculator,
+    plusMinus,
     try_catch_throw,
 } from '../src/dailypractice';
 
@@ -61,4 +61,8 @@ test('phone Book', () => {
 
 test('try catch throw', () => {
     try_catch_throw('4\n3 5\n2 4\n-1 -2\n-1 3');
+});
+
+test('plus minus', () => {
+    plusMinus([-4, 3, -9, 0, 4, 1]);
 });
