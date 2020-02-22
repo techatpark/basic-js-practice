@@ -219,6 +219,14 @@ function plusMinus(arr) {
     console.log((n / len).toFixed(6));
     console.log((z / len).toFixed(6));
 }
+
+function miniMaxSum(arr) {
+    arr.sort((a, b) => a - b);
+    let sum = arr.reduce((total, curr) => {
+        return total + curr;
+    }, 0);
+    console.log(sum - arr[arr.length - 1], sum - arr[0]);
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -234,4 +242,5 @@ export {
     try_catch_throw,
     Calculator,
     plusMinus,
+    miniMaxSum,
 };

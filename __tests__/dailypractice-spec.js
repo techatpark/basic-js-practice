@@ -12,6 +12,7 @@ import {
     phoneBook,
     plusMinus,
     try_catch_throw,
+    miniMaxSum,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -67,4 +68,8 @@ test('plus minus', () => {
     plusMinus([-4, 3, -9, 0, 4, 1]);
     let arr = new Array(2).join('#');
     console.log(arr);
+});
+
+test('minmaxsum', () => {
+    miniMaxSum([7, 69, 2, 221, 8974]);
 });
