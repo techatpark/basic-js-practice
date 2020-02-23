@@ -14,6 +14,7 @@ import {
     try_catch_throw,
     miniMaxSum,
     birthdayCakeCandles,
+    timeConversion,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -77,4 +78,8 @@ test('minmaxsum', () => {
 
 test('birthday cakes problem', () => {
     console.log(birthdayCakeCandles([1, 2, 3, 4, 4, 6, 6, 6]));
+});
+
+test('time conversion', () => {
+    console.log(timeConversion('07:05:45PM'));
 });

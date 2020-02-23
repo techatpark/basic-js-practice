@@ -274,4 +274,5 @@ export {
     plusMinus,
     miniMaxSum,
     birthdayCakeCandles,
+    timeConversion,
 };
