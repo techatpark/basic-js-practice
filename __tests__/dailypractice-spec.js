@@ -15,6 +15,7 @@ import {
     miniMaxSum,
     birthdayCakeCandles,
     timeConversion,
+    findRemainder,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -82,4 +83,12 @@ test('birthday cakes problem', () => {
 
 test('time conversion', () => {
     console.log(timeConversion('07:05:45PM'));
+});
+
+test('find Remainder', () => {
+    let x = 61;
+    let upper = findRemainder(x);
+    if (upper - x < 3) {
+        x = upper;
+    }
 });

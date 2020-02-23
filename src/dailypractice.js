@@ -259,7 +259,8 @@ function timeConversion(s) {
 }
 
 const findRemainder = x => {
-    return x % 5;
+    let lowerMultiple = x - (x % 5);
+    return lowerMultiple + 5;
 };
 export {
     decimal2binary,
@@ -279,5 +280,5 @@ export {
     miniMaxSum,
     birthdayCakeCandles,
     timeConversion,
-    findRemainder;
+    findRemainder,
 };
