@@ -227,6 +227,17 @@ function miniMaxSum(arr) {
     }, 0);
     console.log(sum - arr[arr.length - 1], sum - arr[0]);
 }
+
+function birthdayCakeCandles(ar) {
+    let max = Math.max(...ar);
+    let count = 0;
+    ar.forEach(input => {
+        if (input === max) {
+            count += 1;
+        }
+    });
+    return count;
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -243,4 +254,5 @@ export {
     Calculator,
     plusMinus,
     miniMaxSum,
+    birthdayCakeCandles,
 };

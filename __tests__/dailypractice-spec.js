@@ -13,6 +13,7 @@ import {
     plusMinus,
     try_catch_throw,
     miniMaxSum,
+    birthdayCakeCandles,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -72,4 +73,8 @@ test('plus minus', () => {
 
 test('minmaxsum', () => {
     miniMaxSum([7, 69, 2, 221, 8974]);
+});
+
+test('birthday cakes problem', () => {
+    console.log(birthdayCakeCandles([1, 2, 3, 4, 4, 6, 6, 6]));
 });
