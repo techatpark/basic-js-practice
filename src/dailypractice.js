@@ -257,6 +257,10 @@ function timeConversion(s) {
         return str;
     }
 }
+
+const findRemainder = x => {
+    return x % 5;
+};
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -275,4 +279,5 @@ export {
     miniMaxSum,
     birthdayCakeCandles,
     timeConversion,
+    findRemainder;
 };
