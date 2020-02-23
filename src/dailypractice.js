@@ -238,6 +238,25 @@ function birthdayCakeCandles(ar) {
     });
     return count;
 }
+function timeConversion(s) {
+    let [hour, min, sec] = s.split(':');
+    let re = new RegExp('AM');
+    if (re.test(sec)) {
+        if (hour === '12') {
+            hour = '00';
+        }
+        let str = [hour, min, sec.split('AM')[0]].join(':');
+        return str;
+    } else {
+        if (hour === '12') {
+            hour = '12';
+        } else {
+            hour = Number(hour) + 12;
+        }
+        let str = [hour, min, sec.split('PM')[0]].join(':');
+        return str;
+    }
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
