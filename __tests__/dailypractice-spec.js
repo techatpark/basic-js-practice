@@ -16,6 +16,7 @@ import {
     birthdayCakeCandles,
     timeConversion,
     findRemainder,
+    tweetMatching,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -91,4 +92,12 @@ test('find Remainder', () => {
     if (upper - x < 3) {
         x = upper;
     }
+});
+
+test('tweet Matching', () => {
+    tweetMatching(
+        `4\nI love #hackerrank\n
+        I just scored 27 points in the Picking Cards challenge on #HackerRank\n
+        I just signed up for summer cup @hackerrank\n
+        interesting talk by hari, co-founder of hackerrank`,);
 });
