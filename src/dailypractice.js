@@ -262,6 +262,17 @@ const findRemainder = x => {
     let lowerMultiple = x - (x % 5);
     return lowerMultiple + 5;
 };
+
+function tweetMatching(input) {
+    let [, ...array] = input.split('\n');
+    let regex = /hackerrank/gi;
+    if (array.join(' ').match(regex) != null) {
+        console.log(array.join(' ').match(regex).length);
+    } else {
+        console.log(0);
+    }
+}
+
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -281,4 +292,5 @@ export {
     birthdayCakeCandles,
     timeConversion,
     findRemainder,
+    tweetMatching,
 };
