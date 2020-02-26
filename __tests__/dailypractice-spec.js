@@ -18,6 +18,7 @@ import {
     findRemainder,
     tweetMatching,
     runtime,
+    regularExpression
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -107,4 +108,8 @@ test('tweet Matching', () => {
 test('run time complexity', () => {
     runtime(`3\n12\n5\n7`);
     runtime('2\n2\n1');
+});
+
+test('regular Expression', () => {
+    
 });

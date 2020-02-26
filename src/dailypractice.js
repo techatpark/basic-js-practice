@@ -297,6 +297,17 @@ function runtime(input) {
     }
 }
 
+function regularExpression(firstNameEmailID) {
+    const firstName = firstNameEmailID[0];
+    const emailID = firstNameEmailID[1];
+    const reg = RegExp('@gmail.com');
+    if (reg.test(emailID)) {
+        return firstName;
+    } else {
+        return null;
+    }
+}
+
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -318,4 +329,5 @@ export {
     findRemainder,
     tweetMatching,
     runtime,
+    regularExpression,
 };
