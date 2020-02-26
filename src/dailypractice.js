@@ -315,6 +315,16 @@ function alienUserName(input) {
     }
 }
 
+function phoneNumber(input) {
+    input = input.split('\n');
+    let regex = /^(\d{1,3})[-\s](\d{1,3})[-\s](\d{4,10})$/;
+    let array = [];
+    for (let i = 1; i < input.length; i++) {
+        if ((array = input[i].match(regex)) != null) {
+            console.log(`CountryCode=${array[1]},LocalAreaCode=${array[2]},Number=${array[3]}`);
+        }
+    }
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -338,4 +348,5 @@ export {
     runtime,
     regularExpression,
     alienUserName,
+    phoneNumber,
 };

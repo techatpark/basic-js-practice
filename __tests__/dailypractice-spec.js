@@ -19,7 +19,8 @@ import {
     tweetMatching,
     runtime,
     regularExpression,
-    alienUserName
+    alienUserName,
+    phoneNumber,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -118,4 +119,8 @@ test('regular Expression', () => {
 
 test('alien username', () => {
     alienUserName('3\n_0898989811abced_\n_abce\n_09090909abcD0')
+});
+
+test('phone Number checking', () => {
+    phoneNumber('6\n148-809-2561957985\n188-547-5864327428\n891-454-9195497623\n648-42-380306686\n824-417-6460145493\n489-16-9839392781')
 });
