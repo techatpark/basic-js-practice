@@ -171,6 +171,7 @@ function interquartileRange(input) {
 function phoneBook(input) {
     let array = input.split('\n');
     array[0] = Number(array[0]);
+    // eslint-disable-next-line no-undef
     let phoneBook = new Map();
     for (let i = 1; i <= array[0]; i++) {
         phoneBook.set(array[i].split(' ')[0], Number(array[i].split(' ')[1]));

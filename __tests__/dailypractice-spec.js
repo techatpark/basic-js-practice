@@ -17,7 +17,7 @@ import {
     timeConversion,
     findRemainder,
     tweetMatching,
-    runtime
+    runtime,
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -100,10 +100,11 @@ test('tweet Matching', () => {
         `4\nI love #hackerrank\n
         I just scored 27 points in the Picking Cards challenge on #HackerRank\n
         I just signed up for summer cup @hackerrank\n
-        interesting talk by hari, co-founder of hackerrank`,);
+        interesting talk by hari, co-founder of hackerrank`,
+    );
 });
 
 test('run time complexity', () => {
-expect(x.()).toBe();
+    runtime(`3\n12\n5\n7`);
+    runtime('2\n2\n1');
 });
-
