@@ -17,6 +17,7 @@ import {
     timeConversion,
     findRemainder,
     tweetMatching,
+    runtime
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -101,3 +102,8 @@ test('tweet Matching', () => {
         I just signed up for summer cup @hackerrank\n
         interesting talk by hari, co-founder of hackerrank`,);
 });
+
+test('run time complexity', () => {
+expect(x.()).toBe();
+});
+

@@ -273,6 +273,29 @@ function tweetMatching(input) {
     }
 }
 
+function runtime(input) {
+    input = input.split('\n');
+    function primeOrNot(n) {
+        let count = 0;
+        if (n === 1) {
+            console.log('Not prime');
+        } else if (n != 2 && n % 2 === 0) {
+            console.log('Not prime');
+        } else {
+            let sqrt = Math.pow(n, 0.5);
+            for (let i = 1; i <= sqrt; i++) {
+                if (n % i === 0) {
+                    count += 1;
+                }
+            }
+            count === 1 ? console.log('Prime') : console.log('Not prime');
+        }
+    }
+    for (let i = 1; i <= Number(input[0]); i++) {
+        primeOrNot(Number(input[i]));
+    }
+}
+
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -293,4 +316,5 @@ export {
     timeConversion,
     findRemainder,
     tweetMatching,
+    runtime,
 };
