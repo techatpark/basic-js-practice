@@ -325,6 +325,23 @@ function phoneNumber(input) {
         }
     }
 }
+
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    let countApples = 0,
+        countOranges = 0;
+    for (let i = 0; i < apples.length; i++) {
+        if (apples[i] + a >= s && apples[i] + a <= t) {
+            countApples += 1;
+        }
+    }
+    for (let i = 0; i < oranges.length; i++) {
+        if (oranges[i] + b >= s && oranges[i] + b <= t) {
+            countOranges += 1;
+        }
+    }
+    console.log(countApples);
+    console.log(countOranges);
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -349,4 +366,5 @@ export {
     regularExpression,
     alienUserName,
     phoneNumber,
+    countApplesAndOranges,
 };
