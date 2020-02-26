@@ -307,6 +307,13 @@ function regularExpression(firstNameEmailID) {
         return null;
     }
 }
+function alienUserName(input) {
+    input = input.split('\n');
+    let regex = new RegExp('^[_.][0-9]+[a-zA-Z]*_?$');
+    for (let i = 1; i < input.length; i++) {
+        regex.test(input[i]) ? console.log('VALID') : console.log('INVALID');
+    }
+}
 
 export {
     decimal2binary,
@@ -330,4 +337,5 @@ export {
     tweetMatching,
     runtime,
     regularExpression,
+    alienUserName,
 };

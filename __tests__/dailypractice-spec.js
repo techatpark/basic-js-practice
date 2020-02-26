@@ -18,7 +18,8 @@ import {
     findRemainder,
     tweetMatching,
     runtime,
-    regularExpression
+    regularExpression,
+    alienUserName
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -113,4 +114,8 @@ test('run time complexity', () => {
 test('regular Expression', () => {
     console.log(regularExpression(['riya', 'riya@gmail.com']));
     console.log(regularExpression(['riya', 'riya@gmil.com']));
+});
+
+test('alien username', () => {
+    alienUserName('3\n_0898989811abced_\n_abce\n_09090909abcD0')
 });
