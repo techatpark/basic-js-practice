@@ -21,6 +21,7 @@ import {
     regularExpression,
     alienUserName,
     phoneNumber,
+    countApplesAndOranges
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -123,4 +124,8 @@ test('alien username', () => {
 
 test('phone Number checking', () => {
     phoneNumber('6\n148-809-2561957985\n188-547-5864327428\n891-454-9195497623\n648-42-380306686\n824-417-6460145493\n489-16-9839392781')
+});
+
+test('count Apples and Oranges', () => {
+    countApplesAndOranges(7,11,5,15,[-2, 2, 1],[5,-6]);
 });
