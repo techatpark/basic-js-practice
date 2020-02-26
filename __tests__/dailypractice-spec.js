@@ -111,5 +111,6 @@ test('run time complexity', () => {
 });
 
 test('regular Expression', () => {
-    
+    console.log(regularExpression(['riya', 'riya@gmail.com']));
+    console.log(regularExpression(['riya', 'riya@gmil.com']));
 });
