@@ -102,6 +102,7 @@ const standardDeviation = input => {
 function try_catch_magic(input) {
     try {
         let n = parseInt(input);
+        // eslint-disable-next-line no-undef
         isNaN(n) && k();
         return n;
     } catch (error) {
@@ -379,6 +380,19 @@ function sockMerchant(ar) {
     }
     return total;
 }
+
+function birthday(s, d, m) {
+    let array = Array.from(s);
+    let sets = [];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        sets = array.slice(i, i + m);
+        if (sets.reduce((total, curr) => curr + total) === d) {
+            count += 1;
+        }
+    }
+    return count;
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -406,4 +420,5 @@ export {
     countApplesAndOranges,
     dayOfProgrammer,
     sockMerchant,
+    birthday,
 };
