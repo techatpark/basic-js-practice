@@ -130,3 +130,9 @@ test('phone Number checking', () => {
 test('count Apples and Oranges', () => {
     countApplesAndOranges(7,11,5,15,[-2, 2, 1],[5,-6]);
 });
+
+test('dy of programmer', () => {
+    console.log(dayOfProgrammer(1918));
+    console.log(dayOfProgrammer(2017));
+    console.log(dayOfProgrammer(2008));
+});
