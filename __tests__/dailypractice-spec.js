@@ -21,7 +21,8 @@ import {
     regularExpression,
     alienUserName,
     phoneNumber,
-    countApplesAndOranges
+    countApplesAndOranges,
+    dayOfProgrammer
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
