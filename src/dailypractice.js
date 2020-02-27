@@ -356,6 +356,29 @@ function dayOfProgrammer(year) {
         } else return `13.09.${year}`;
     }
 }
+
+function sockMerchant(ar) {
+    // eslint-disable-next-line no-undef
+    let array = Array.from(new Set(ar)),
+        regex,
+        count,
+        total = 0;
+    array.sort((a, b) => a - b);
+
+    let str = ar.sort((a, b) => a - b).toString(),
+        regexp,
+        x;
+
+    for (let i = 0; i < array.length; i++) {
+        regexp = '\\b' + array[i].toString() + '\\b';
+        regex = new RegExp(regexp, 'g');
+
+        x = Array.from(str.match(regex));
+        count = Math.floor(x.length / 2);
+        total = total + count;
+    }
+    return total;
+}
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -382,4 +405,5 @@ export {
     phoneNumber,
     countApplesAndOranges,
     dayOfProgrammer,
+    sockMerchant,
 };

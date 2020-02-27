@@ -22,7 +22,8 @@ import {
     alienUserName,
     phoneNumber,
     countApplesAndOranges,
-    dayOfProgrammer
+    dayOfProgrammer,
+    sockMerchant
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -135,4 +136,10 @@ test('dy of programmer', () => {
     console.log(dayOfProgrammer(1918));
     console.log(dayOfProgrammer(2017));
     console.log(dayOfProgrammer(2008));
+    let x = 'abc';
+});
+
+test('sock merchant', () => {
+    //this program finds the toal number of sock pairs
+    console.log(sockMerchant([10,20,20,10,10,30,50,10,20]))
 });
