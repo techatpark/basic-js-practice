@@ -148,3 +148,24 @@ test('sock merchant', () => {
 test('Find the no.of chocaltes for birthday', () => {
     console.log(birthday(11111, 3, 3))
 });
+
+test('learning objects', () => {
+    function migratoryBirds(array) {
+        let obj = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+        for( let i = 0; i < array.length; i++){
+            obj[array[i]] += 1;
+        }
+        let freq = Object.values(obj);
+        freq.sort((a,b) => b-a);
+        let key = freq[0];
+        let mostCommonBirds = [];
+        for(const keys in obj){
+            if(obj[keys] === key){
+                mostCommonBirds.push(keys);
+            }
+        }
+        mostCommonBirds.sort((a,b) => a-b);
+        console.log(mostCommonBirds[0]);
+    }
+    migratoryBirds([1,2,3,4,5,4,3,2,1,3,4]);
+});

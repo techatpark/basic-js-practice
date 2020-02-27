@@ -393,6 +393,7 @@ function birthday(s, d, m) {
     }
     return count;
 }
+
 export {
     decimal2binary,
     maximumNumberOfOnes,
