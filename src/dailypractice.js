@@ -394,6 +394,25 @@ function birthday(s, d, m) {
     return count;
 }
 
+function pickingNumbers(a) {
+    let max = 0;
+    let array = Array.from(new Set(a));
+    array.sort((a, b) => a - b);
+    for (let i = 0; i < array.length; i++) {
+        if (array[i + 1] - array[i] <= 1) {
+            let count =
+                a.filter(element => element === array[i]).length + a.filter(element => element === array[i + 1]).length;
+            if (count > max) {
+                max = count;
+            }
+        }
+        if (a.filter(element => element === array[i]).length > max) {
+            max = a.filter(element => element === array[i]).length;
+        }
+    }
+    return max;
+}
+
 export {
     decimal2binary,
     maximumNumberOfOnes,
@@ -422,4 +441,5 @@ export {
     dayOfProgrammer,
     sockMerchant,
     birthday,
+    pickingNumbers,
 };
