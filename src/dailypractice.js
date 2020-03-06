@@ -412,8 +412,23 @@ function pickingNumbers(a) {
     }
     return max;
 }
+function validLang(input) {
+    let str =
+        'C:CPP:JAVA:PYTHON:PERL:PHP:RUBY:CSHARP:HASKELL:CLOJURE:BASH:SCALA: ERLANG:CLISP:LUA:BRAINFUCK:JAVASCRIPT:GO:D:OCAML:R:PASCAL:SBCL:DART: GROOVY:OBJECTIVEC';
+    input = input.split('\n');
+    for (let i = 1; i < input.length; i++) {
+        input[i] = input[i].split(' ')[1];
+        let regex = new RegExp('\\b' + input[i] + '\\b', 'g');
+        if (str.match(regex) != null) {
+            console.log('VALID');
+        } else {
+            console.log('INVALID');
+        }
+    }
+}
 
 export {
+    validLang,
     decimal2binary,
     maximumNumberOfOnes,
     getMaxLessThanK,

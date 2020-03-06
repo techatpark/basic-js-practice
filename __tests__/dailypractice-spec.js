@@ -24,7 +24,8 @@ import {
     countApplesAndOranges,
     dayOfProgrammer,
     sockMerchant,
-    birthday
+    birthday,
+    validLang
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -168,4 +169,8 @@ test('learning objects', () => {
         console.log(mostCommonBirds[0]);
     }
     migratoryBirds([1,2,3,4,5,4,3,2,1,3,4]);
+});
+
+test('valid languages problem', () => {
+    validLang('3\n11011 LUA\n11022 BRAINFUCK\n11044 X');
 });
