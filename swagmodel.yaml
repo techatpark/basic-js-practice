@@ -1,26 +1,125 @@
-# so we are going to learn about the basic structures.
-
-openapi: 3.0.0
+swagger: '2.0'
 info:
-  title: Basic Practice
-  description: so this is a basic practice module.
-  version: 0.1.9
-
-servers:
-  - url: http://api.example.com/v1
-    description: Optional server description, e.g. Main (production) server
-  - url: http://staging-api.example.com
-    description: Optional server description, e.g. Internal staging server for testing
-    
-paths:
-  /users:
-    get:
-      summary: it gets the no. of users currently signed up.
-      responses:
-        '200': # status code
-          content: 
-            application/json:
-              schema: 
-                type: array
-                items: 
-                  type: string
+  title: 'Equator Technologies'
+  version: 1.0.0
+host: petstore.swagger.io
+basePath: /v2
+definitions:
+  Order:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      petId:
+        type: integer
+        format: int64
+      quantity:
+        type: integer
+        format: int32
+      shipDate:
+        type: string
+        format: date-time
+      status:
+        type: string
+        description: Order Status
+        enum:
+          - placed
+          - approved
+          - delivered
+      complete:
+        type: boolean
+        default: false
+    xml:
+      name: Order
+  Category:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+    xml:
+      name: Category
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      username:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      userStatus:
+        type: integer
+        format: int32
+        description: User Status
+    xml:
+      name: User
+  Tag:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+    xml:
+      name: Tag
+  Pet:
+    type: object
+    required:
+      - name
+      - photoUrls
+    properties:
+      id:
+        type: integer
+        format: int64
+      category:
+        $ref: '#/definitions/Category'
+      name:
+        type: string
+        example: doggie
+      photoUrls:
+        type: array
+        xml:
+          name: photoUrl
+          wrapped: true
+        items:
+          type: string
+      tags:
+        type: array
+        xml:
+          name: tag
+          wrapped: true
+        items:
+          $ref: '#/definitions/Tag'
+      status:
+        type: string
+        description: pet status in the store
+        enum:
+          - available
+          - pending
+          - sold
+    xml:
+      name: Pet
+  ApiResponse:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      type:
+        type: string
+      message:
+        type: string
