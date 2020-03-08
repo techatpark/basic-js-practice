@@ -427,6 +427,16 @@ function validLang(input) {
     }
 }
 
+function findingProgramming(input) {
+    if (input.match(new RegExp('#include<stdio.h>', 'g')) != null) {
+        console.log('C');
+    } else if (input.match(new RegExp('import java.io.*', 'g')) != null) {
+        console.log('Java');
+    } else {
+        console.log('Python');
+    }
+}
+
 export {
     validLang,
     decimal2binary,
@@ -457,4 +467,5 @@ export {
     sockMerchant,
     birthday,
     pickingNumbers,
+    findingProgramming,
 };

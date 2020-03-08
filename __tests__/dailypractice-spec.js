@@ -25,7 +25,8 @@ import {
     dayOfProgrammer,
     sockMerchant,
     birthday,
-    validLang
+    validLang,
+    findingProgramming
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -173,4 +174,16 @@ test('learning objects', () => {
 
 test('valid languages problem', () => {
     validLang('3\n11011 LUA\n11022 BRAINFUCK\n11044 X');
+});
+
+test('finding programming', () => {
+    findingProgramming(`import java.io.*;
+
+    public class SquareNum {
+    
+       public static void main(String args[]) throws IOException
+       {
+          System.out.println("This is a small Java Program!");
+       }
+    }`);
 });
