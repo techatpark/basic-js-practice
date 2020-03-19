@@ -26,7 +26,8 @@ import {
     sockMerchant,
     birthday,
     validLang,
-    findingProgramming
+    findingProgramming,
+    printOnly
 } from '../src/dailypractice';
 
 test('decimal to binary', () => {
@@ -186,4 +187,8 @@ test('finding programming', () => {
           System.out.println("This is a small Java Program!");
        }
     }`);
+});
+
+test('print Only', () => {
+    printOnly(8, 11);
 });

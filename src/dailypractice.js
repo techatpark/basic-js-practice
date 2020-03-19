@@ -437,7 +437,17 @@ function findingProgramming(input) {
     }
 }
 
+function printOnly(a, b) {
+    let label = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'even', 'odd'];
+    for (let i = a; i <= b; i++) {
+        let curr;
+        i <= 9 ? (curr = label[i - 1]) : (curr = label[9 + (i % 2)]);
+        console.log(`${i} : ${curr}`);
+    }
+}
+
 export {
+    printOnly,
     validLang,
     decimal2binary,
     maximumNumberOfOnes,
